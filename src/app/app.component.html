@@ -1,0 +1,53 @@
+<mat-drawer-container hasBackdrop="false" class="d-flex flex-column justify-content-center w-full h-full">
+    <mat-drawer [opened]="isDesktop" mode="side" class="lg:min-w-[420px] min-w-full">
+  
+      <!-- Close Menu (Mobile) -->
+      <button *ngIf="isDesktop" (click)="toggleDrawer()" class="!inline-block lg:!hidden !fixed !top-4 !right-4" type="button" mat-button>
+        <i class="fa-solid fa-x"></i>
+      </button>
+
+      <h1 class="text-3xl text-slate-400 font-[700] my-4 mt-8 ml-4 lg:ml-[unset] lg:text-center">
+        <i class="fa-solid fa-brain mr-1"></i>Brainhouse Laboratories
+      </h1>
+
+      <div class="p-4 mx-2">
+        <mat-list>
+            <mat-action-list>
+                <button mat-list-item class="!py-[0.7em]" routerLink="/home">
+                    <i class="fa-solid fa-house-chimney mr-2 w-[20px] !text-purple-400/80"></i> Home
+                </button>
+
+                <mat-divider></mat-divider>
+
+                <button mat-list-item class="!py-[0.7em]" routerLink="/about">
+                    <i class="fa-solid fa-circle-info mr-2 w-[20px] !text-orange-400/80"></i> About
+                </button>
+
+                <mat-divider></mat-divider>
+
+                <button mat-list-item class="!py-[0.7em]" routerLink="/phalanx">
+                    <i class="fa-solid fa-comment mr-2 w-[20px] !text-sky-500/80"></i> Phalanx <i class="fa-solid fa-caret-down !text-right"></i>
+                </button>
+            </mat-action-list>
+          </mat-list>
+      </div>
+  
+    </mat-drawer>
+    <mat-drawer-content>
+  
+      <!-- Open Menu (Both) -->
+      <button (click)="toggleDrawer()" class="!fixed !top-4 !right-4 !text-neutral-300" type="button" mat-button>
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+  
+      <!-- Main Content Route -->
+      <div class="w-[90%] mx-auto mt-8">
+        
+        <div class="p-4">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </mat-drawer-content>
+  </mat-drawer-container>
+  

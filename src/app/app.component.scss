@@ -1,0 +1,17 @@
+.mat-drawer-container {
+    background: transparent !important;
+}
+
+.mat-drawer {
+    background: #000d20 !important;
+}
+
+
+  mat-drawer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-x: hidden !important;
+    padding-left: 1em;
+    padding-right: 1em;
+  }

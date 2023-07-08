@@ -1,0 +1,138 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$md-phalanx: (
+    50 : #e5f3ff,
+    100 : #bfe2ff,
+    200 : #94ceff,
+    300 : #69bafe,
+    400 : #49acfe,
+    500 : #2b9df3,
+    600 : #2495fe,
+    700 : #1f8bfe,
+    800 : #1981fe,
+    900 : #0f6ffd,
+    A100 : #ffffff,
+    A200 : #f6f9ff,
+    A400 : #c3d9ff,
+    A700 : #a9c8ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : rgb(212 212 212),
+        700 : rgb(212 212 212),
+        800 : rgb(212 212 212),
+        900 : rgb(212 212 212),
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+$my-typography: mat.define-typography-config(
+  $headline-1: mat.define-typography-level(112px, 112px, 300, $letter-spacing: -0.05em),
+  $headline-2: mat.define-typography-level(56px, 56px, 400, $letter-spacing: -0.02em),
+  $headline-3: mat.define-typography-level(45px, 48px, 400, $letter-spacing: -0.005em),
+  $headline-4: mat.define-typography-level(34px, 40px, 400),
+  $headline-5: mat.define-typography-level(24px, 32px, 400),
+);
+
+$angular-primary: mat.define-palette($md-phalanx, 500, 100, 900);
+$angular-accent: mat.define-palette($md-phalanx, A200, A100, A400);
+$angular-warn: mat.define-palette(mat.$red-palette);
+
+
+$angular-default-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $angular-primary,
+      accent: $angular-accent,
+      warn: $angular-warn,
+    ),
+  )
+);
+
+$angular-dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $angular-primary,
+      accent: $angular-accent,
+      warn: $angular-warn,
+    ),
+  )
+);
+
+.darkMode {
+  @include mat.all-component-colors($angular-dark-theme);
+}
+
+
+@include mat.all-component-colors($angular-dark-theme);
+
+// Include the theme mixins for other components you use here.
+
+@include mat.core();
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root{
+  color-scheme: dark;
+}
+
+
+h1{
+  font-family: 'Agdasima', sans-serif;
+}
+
+body {
+  color: rgb(212 212 212) !important;
+  font-family: 'Ubuntu', sans-serif;
+  background: linear-gradient(-45deg, #006cd1, #003566 , #001122);
+  background-size: 200% 200%;
+  animation: gradient 12s ease infinite;
+  height: 100vh;
+}
+
+.mat-drawer-container, .mdc-list-item__primary-text {
+  color: rgb(163 163 163) !important;
+  font-weight: 500 !important;
+}
+
+button{
+  color: rgb(163 163 163) !important;
+  font-size: 1.05rem !important;
+  font-weight: 700;
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+
+  50% {
+      background-position: 100% 50%;
+  }
+
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+.mat-primary {
+    	color: rgb(229 229 229) !important;
+        margin-right: 1em !important;
+}
+
+
