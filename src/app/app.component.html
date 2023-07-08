@@ -1,5 +1,5 @@
 <mat-drawer-container hasBackdrop="false" class="d-flex flex-column justify-content-center w-full h-full">
-    <mat-drawer [opened]="isDesktop" mode="side" class="lg:min-w-[420px] min-w-full">
+    <mat-drawer #drawer [opened]="isDesktop" mode="side" class="lg:min-w-[420px] min-w-full">
   
       <!-- Close Menu (Mobile) -->
       <button *ngIf="isDesktop" (click)="toggleDrawer()" class="!inline-block lg:!hidden !fixed !top-4 !right-4" type="button" mat-button>
@@ -13,28 +13,28 @@
       <div class="p-4 mx-2">
         <mat-list>
             <mat-action-list>
-                <button mat-list-item class="!py-[0.7em]" routerLink="/home">
+                <button mat-list-item class="!py-[0.7em]" routerLink="/home" (click)="closeMobile()">
                     <i class="fa-solid fa-house-chimney mr-2 w-[20px] !text-purple-400/80"></i> Home
                 </button>
 
                 <mat-divider></mat-divider>
 
-                <button mat-list-item class="!py-[0.7em]" routerLink="/about">
+                <button mat-list-item class="!py-[0.7em]" routerLink="/about" (click)="closeMobile()">
                     <i class="fa-solid fa-circle-info mr-2 w-[20px] !text-orange-400/80"></i> About
                 </button>
 
                 <mat-divider></mat-divider>
 
-                <button mat-list-item class="!py-[0.7em]" routerLink="/phalanx">
+                <button mat-list-item class="!py-[0.7em]" routerLink="/phalanx" (click)="closeMobile()">
                     <i class="fa-solid fa-comment mr-2 w-[20px] !text-sky-500/80"></i> Phalanx <i class="fa-solid fa-caret-down !text-right"></i>
                 </button>
 
                 <div class="mx-10">
-                  <button mat-list-item class="!py-[0.7em] " routerLink="/phalanx">
+                  <button mat-list-item class="!py-[0.7em] " routerLink="/phalanx/users" (click)="closeMobile()">
                     <i class="fa-solid fa-users mr-2 w-[20px] !text-amber-400/80"></i> Users List <span class="font-[200]">({{usersOnline}} online)</span>
                   </button>
                   <mat-divider></mat-divider>
-                  <button mat-list-item class="!py-[0.7em] " routerLink="/phalanx">
+                  <button mat-list-item class="!py-[0.7em] " routerLink="/phalanx" (click)="closeMobile()">
                     <i class="fa-solid fa-download mr-2 w-[20px] !text-green-500/80"></i> Download Client <span class="font-[200]">(v.{{clientVersion}})</span>
                   </button>
                 </div>

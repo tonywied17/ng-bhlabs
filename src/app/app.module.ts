@@ -7,6 +7,7 @@ import { HomeComponent } from './_components/home/home.component'
 import { AboutComponent } from './_components/about/about.component';
 import { ContactComponent } from './_components/contact/contact.component';
 import { PhalanxComponent } from './_components/phalanx/phalanx.component';
+import { UsersListComponent } from './_components/phalanx/users-list/users-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -15,7 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    PhalanxComponent
+    PhalanxComponent,
+    UsersListComponent
   ],
   imports: [
     BrowserModule,

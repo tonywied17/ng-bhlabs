@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatDrawer } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'bhlabs';
+  @ViewChild('drawer') drawer!: MatDrawer;
   isDesktop!: boolean;
   clientVersion: string = '5.7.0';
   usersOnline: number = 0;
@@ -15,7 +17,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.isDesktop = window.innerWidth >= 1024; // Set the breakpoint according to your desired desktop view width
+    this.isDesktop = window.innerWidth >= 1024;
     window.addEventListener('resize', this.onResize);
   }
 
@@ -23,7 +25,13 @@ export class AppComponent implements OnInit {
     this.isDesktop = !this.isDesktop;
   }
   
+  closeMobile() {
+    if(window.innerWidth <= 1024) {
+      this.drawer.close();
+    }
+  }
+
   onResize = () => {
-    this.isDesktop = window.innerWidth >= 1024; // Update the isDesktop property on window resize
+    this.isDesktop = window.innerWidth >= 1024;
   }
 }

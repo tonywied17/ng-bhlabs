@@ -1,29 +1,13 @@
-.header-border {
-    border-width: 2px;
-    border-style: solid;
-    border-image: linear-gradient(to right, #074296, #226ec0) 1;
-    border-left: 0;
-    border-right: 0;
-    border-top: 0;
-  }
-  
-  .mat-mdc-card {
-      background: #01183b98;
-  }
-  
-  .mat-mdc-card-title{
-      font-size: 1.5rem;
-  }
-  
-  .mat-mdc-card-subtitle{
-      margin-top: 0.5em;
-      margin-left: 0.5em;
-      margin-bottom: 1em;
-  }
+.mat-mdc-card {
+  background: #01183b98;
+}
 
-  h1::before {
-    font: var(--fa-font-solid);
-    content: "\f0c8";
-    color: #074296;
-    padding-right: 0.55em;
-  }
+.mat-mdc-card-title {
+  font-size: 1.5rem;
+}
+
+.mat-mdc-card-subtitle {
+  margin-top: 0.5em;
+  margin-left: 0.5em;
+  margin-bottom: 1em;
+}

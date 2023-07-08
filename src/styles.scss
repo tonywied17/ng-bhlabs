@@ -135,3 +135,55 @@ button{
         margin-right: 1em !important;
 }
 
+.header-border {
+  border-width: 2px;
+  border-style: solid;
+  border-image: linear-gradient(to right, #074296, #226ec0) 1;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+}
+
+.header-border::before {
+  font: var(--fa-font-solid);
+  content: "\f0c8";
+  color: #074296;
+  padding-right: 0.55em;
+}
+
+
+
+
+/**
+CSS KEYFRAMES
+**/
+
+.scale-center {
+  animation: scale-center .3s ease 0s 1 normal forwards;
+}
+
+@keyframes scale-center {
+	0% {
+		transform: scale(0.5);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+.slide-left {
+  animation: slide-left .4s ease 0s 1 normal forwards;
+}
+
+@keyframes slide-left {
+	0% {
+		opacity: 0;
+		transform: translateX(-250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
