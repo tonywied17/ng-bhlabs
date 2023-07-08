@@ -28,7 +28,21 @@
                 <button mat-list-item class="!py-[0.7em]" routerLink="/phalanx">
                     <i class="fa-solid fa-comment mr-2 w-[20px] !text-sky-500/80"></i> Phalanx <i class="fa-solid fa-caret-down !text-right"></i>
                 </button>
+
+                <div class="mx-10">
+                  <button mat-list-item class="!py-[0.7em] " routerLink="/phalanx">
+                    <i class="fa-solid fa-users mr-2 w-[20px] !text-amber-400/80"></i> Users List <span class="font-[200]">({{usersOnline}} online)</span>
+                  </button>
+                  <mat-divider></mat-divider>
+                  <button mat-list-item class="!py-[0.7em] " routerLink="/phalanx">
+                    <i class="fa-solid fa-download mr-2 w-[20px] !text-green-500/80"></i> Download Client <span class="font-[200]">(v.{{clientVersion}})</span>
+                  </button>
+                </div>
+                
             </mat-action-list>
+
+
+
           </mat-list>
       </div>
   
@@ -42,7 +56,7 @@
 
   
       <!-- Main Content Route -->
-      <div class="w-[90%] mx-auto mt-8">
+      <div class="w-full sm:w-[90%] mx-auto mt-8">
         
         <div class="p-4">
           <router-outlet></router-outlet>

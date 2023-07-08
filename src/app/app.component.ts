@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  isDesktop!: boolean;
   title = 'bhlabs';
+  isDesktop!: boolean;
+  clientVersion: string = '5.7.0';
+  usersOnline: number = 0;
 
   constructor() {
   }

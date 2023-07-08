@@ -1,1 +1,15 @@
-<p>home works!</p>
+<h1 class="text-4xl header-border pb-2 mb-8">Latest Developments...</h1>
+
+<mat-card class="my-4 sm:mx-4">
+    <mat-card-header>
+        <mat-card-title><i class="fa-solid fa-chess-rook"></i> Log Castle</mat-card-title>
+        <mat-card-subtitle>Public Release <span class="font-[200]">V1.1.25.35</span></mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <div [innerHTML]="longText"></div>
+    </mat-card-content>
+    <mat-card-actions align="end">
+        <button mat-button>VIEW</button>
+        <button mat-button>SHARE</button>
+    </mat-card-actions>
+</mat-card>
